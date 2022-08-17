@@ -1,12 +1,14 @@
 #!/bin/bash
 start_time=$(date +%s)
 status=
+
 elapsed=0
 port=80
 base=http://localhost
 url=/
+time_cap=14400
 
-while [ $elapsed -lt 14400 ]
+while [ $elapsed -lt $time_cap ]
 do
     end_time=$(date +%s)
     elapsed=$(( end_time - start_time ))
